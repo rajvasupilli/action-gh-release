@@ -2,7 +2,7 @@ name: Myth
 
 on:
  push:
-   tags: '*'
+   tags: "v*.*.*"
 
 jobs:
   build:
