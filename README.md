@@ -27,7 +27,7 @@
 
 Typically usage of this action involves adding a step to a build that
 is gated pushes to git tags. You may find `step.if` field helpful in accomplishing this
-as it maximizes the reuse value of your workflow for non-tag pushes.
+as it maximizes the re-use value of your workflow for non-tag pushes.
 
 Below is a simple example of `step.if` tag gating
 
