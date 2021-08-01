@@ -1,8 +1,6 @@
-name: Myth
+name: Semantic Versioning
 
-on:
- push:
-   tags: "v*.*.*"
+on: push
 
 jobs:
   build:
@@ -10,8 +8,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
-
-
+      - name:  'Automated Version Bump'
+        uses:  'phips28/gh-action-bump-version@master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          target-branch: 'master'
