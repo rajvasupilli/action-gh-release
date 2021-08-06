@@ -18,7 +18,7 @@ jobs:
   - name: Checkout
     uses: actions/checkout@v2
     with:
-     token: ${{ secrets.SEM_TOKEN }}
+     NPM_TOKEN: ${{ secrets.SEM_TOKEN }}
 
   # Setup Node.js using the appropriate version
   - name: Use Node.js ${{ matrix.node-version }}
